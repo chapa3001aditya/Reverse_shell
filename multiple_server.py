@@ -143,13 +143,29 @@ def send_target_command(connect):
         print("Error sending commands")
 
 
+def create_workers():
+    for _ in range(Number_of_threads):
+        t = threading.thread(target=work)
+        t.daemon = True 
+        t.start()
+
+# do next job that is thw queue 
+def work():
+    while True:
+        x = queue.get()
+        if x == 1:
+            socket_creation()
+            binding()
+            accepting_responses()
+        if x == 2:
+            strt_the_minion()
+
+        queue.task_done()
 
 
-def main():
-    socket_creation()
-    binding()
-    socket_accept
+def create_jobs():
+    '''Creats jobs'''
+    for x in Job_number:
+        queue.put(x)
 
-
-if __name__=="__main__":
-    main()
+    queue.join()
