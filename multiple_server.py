@@ -13,6 +13,7 @@ all_address = list()
 
 
 def socket_creation():
+    """Using the socket library we are creating the sockets"""
     global host
     global port
     global s
@@ -27,6 +28,7 @@ def socket_creation():
 
 
 def binding():
+    """Here we are binding the sockets to the port number"""
     try:
         global host
         global port 
