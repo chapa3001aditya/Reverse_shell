@@ -5,8 +5,8 @@ import os                           # these two libraries are important for exec
 
 s = socket.socket()
 
-host = "192.168.109.138"                           # always ensure that you upadte the ip address if using on a local computer, if a server then ignore
-port = 9999                        # ensure that the port number shld be the same in both the client and server files can be anyother apart from 9999 but have to be the smae in both the files
+host = ""                           # always ensure that you upadte the ip address if using on a local computer, if a server then ignore
+port =                         # ensure that the port number shld be the same in both the client and server files can be anyother apart from 9999 but have to be the smae in both the files
 
 
 # binding the host and port (is diff for both the client and server)

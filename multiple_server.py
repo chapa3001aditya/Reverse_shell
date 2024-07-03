@@ -151,7 +151,7 @@ def create_workers():
         t.daemon = True 
         t.start()
 
-# do next job that is thw queue 
+# do next job that is the queue 
 def work():
     while True:
         x = queue.get()
